@@ -1,0 +1,333 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #ffb8de;
+}
+
+header {
+    height: 13vh;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    background-color: #6D9952;
+    padding-top: 2vh;
+    padding-left: 3vh;
+    padding-right: 3vh;
+    align-items: center;
+    z-index: 9999;
+    position: fixed;
+}
+
+.fade-in-up {
+    opacity: 0;
+    transform: translateY(10px);
+    animation: fadeInUp 0.5s ease forwards;
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.svg {
+    position: fixed;
+    margin-top: 13vh;
+
+}
+
+.logo {
+    width: 30vh;
+    z-index: 99999;
+    margin-top: 2vh;
+}
+
+.links_header {
+    display: flex;
+    gap: 6vh;
+    text-decoration: none;
+    list-style: none;
+    width: 100%;
+    justify-content: center;
+    margin-top: 3vh;
+}
+
+.links_header li a {
+    text-decoration: none;
+    color: #ffffff;
+    font-family: comic sans ms;
+    font-size: 3vh;
+}
+
+/* Animação de flutuar */
+@keyframes flutuar {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-5px);
+    }
+}
+
+.links_header a {
+    position: relative;
+    display: inline-block;
+    padding: 0 1.5em;
+    transition: transform 0.3s ease;
+    text-align: center;
+}
+
+.links_header a:hover {
+    animation: flutuar 1s infinite;
+}
+
+.links_header a::before,
+.links_header a::after {
+    content: "🍓";
+    position: absolute;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    font-size: 1em;
+}
+
+.links_header a::before {
+    left: 0;
+    top: 0;
+}
+
+.links_header a::after {
+    right: 0;
+    top: 0;
+}
+
+.links_header a:hover::before,
+.links_header a:hover::after {
+    opacity: 1;
+}
+
+.Container_conversa {
+    width: 100%;
+    height: 87vh;
+    background-image: 
+        linear-gradient(to top, rgba(255, 255, 255, 0), #d49ebb 90%, #d49ebb 100%),
+        url('img/background.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.balao {
+    width: 50vh;
+}
+
+.morango_interagir {
+    width: 35vh;
+    margin-top: 30vh;
+    margin-left: 10vh;
+    transform: rotateY(180deg);
+}
+
+.controlador_interacao {
+    display: flex;
+    align-items: center;
+}
+
+.Container_botoes {
+    width: 50vh;
+    margin-top: 32vh;
+    height: 50vh;
+    border: 4px solid #6d222f;
+    background-color: #cb354eb7;
+    margin-left: 20vh;
+    border-radius: 3vh;
+}
+
+.caixa {
+    position: relative;
+}
+
+.caixa p {
+    position: absolute;
+    top: 0;
+    margin-top: 7vh;
+    width: 40vh;
+    height: 13vh;
+    margin-left: 5vh;
+    color: #a11c32;
+    font-family: comic sans ms;
+    font-size: 2vh;
+}
+
+.title {
+    width: 100%;
+    height: 5vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top-left-radius: 3vh;
+    border-top-right-radius: 3vh;
+    font-family: comic sans ms;
+    color: white;
+    font-size: 3vh;
+}
+
+.botoes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    margin-top: 2vh;
+    overflow-y: auto;
+    height: 41vh;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.botoes::-webkit-scrollbar {
+    display: none;
+}
+
+
+.botoes button {
+    width: 80%;
+    height: auto;
+    min-height: 7vh;
+    border-radius: 1.5vh;
+    background-color: #6D9952;
+    border: 3px solid #293a1f;
+    outline: none;
+    box-shadow: none;
+    font-family: Comic Sans MS;
+    font-size: 2vh;
+    white-space: normal;
+    word-break: break-word;
+    padding: 1vh;
+    text-align: center;
+}
+
+.botoes button:hover {
+    cursor: pointer;
+}
+
+.livro {
+    width: 50vh;
+}
+
+.historia_container {
+    font-family: comic sans ms;
+    margin-left: 10vh;
+    display: flex;
+    align-items: center;
+    background-color: #fda2c7;
+}
+
+.historia_container p {
+    font-size: 3vh;
+    width: 120vh;
+    display: flex;
+    padding-left: 5vh;
+    color: #8b1024;
+}
+
+.imagem_texto_historia {
+    display: flex;
+    flex-direction: column;
+    gap: 5vh;
+    align-items: center;
+    font-size: 3vh;
+    color: #CB354E;
+    background-color: #ffb8de;
+    padding-right: 6vh;
+}
+
+.morango_texto {
+    width: 20vh;
+    margin-right: 5vh;
+}
+
+.amigos {
+    width: 40vh;
+    margin-left: 10vh;
+    margin-top: 5vh;
+}
+
+.amigos_container h2 {
+    font-family: comic sans ms;
+    font-size: 5vh;
+    margin-top: 4vh;
+    margin-left: 5vh;
+    color: #CB354E;
+}
+
+.container_personagens {
+    display: flex;
+    gap: 5vh;
+    margin-left: 5vh;
+}
+
+.amigo {
+    width: 20vh;
+    height: 40vh;
+    margin-top: 5vh;
+}
+
+.amigo:hover {
+    cursor: pointer;
+}
+
+.hud_personagens {
+    display: flex;
+}
+
+.container_informacoes {
+    width: 50vh;
+    margin-left: 20vh;
+    border: 4px solid #a34051;
+    background-color: #cb354eb7;
+    border-radius: 3vh;
+}
+
+.nome {
+    font-family: comic sans ms;
+    font-size: 4vh;
+    color: #ffffff;
+    text-align: center;
+    margin-top: 2vh;
+}
+
+.desc {
+    color: #ffffff;
+    font-family: comic sans ms;
+    display: flex;
+    justify-items: center;
+    text-align: justify;
+    margin-top: 2vh;
+    padding-left: 3vh;
+    padding-right: 3vh;
+}
+
+footer {
+    height: 20vh;
+    background-color: #a11c32;
+}
+
+.svgF {
+    display: block;
+    margin: -1;
+    padding: -1;
+    line-height: -1;
+}
+
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-family: comic sans ms;
+    font-size: 3vh;
+}
